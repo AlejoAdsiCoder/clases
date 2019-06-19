@@ -6,14 +6,15 @@ use Illuminate\Http\Request;
 
 class JugadoresController extends Controller
 {
-    /**
+   /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        //
+        return view('jugadores.index')
+            ->with('arrayJugadores', $this->arrayJugadores);
     }
 
     /**
@@ -45,7 +46,7 @@ class JugadoresController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('jugadores.show', array('id' => $id));
     }
 
     /**
@@ -56,7 +57,7 @@ class JugadoresController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('jugadores.edit', array('id' => $id));
     }
 
     /**
@@ -81,4 +82,35 @@ class JugadoresController extends Controller
     {
         //
     }
+
+     private $arrayJugadores = array(
+        array(
+            'foto' => 'http://ximg.es/100x100/100/000/fff&text=jugador1',
+            'nombre' => 'Pepito1',
+            'posicion' => 'volante',
+            'numero' => 10,
+            'equipo' => 'Equipo1',
+        ),
+        array(
+            'foto' => 'http://ximg.es/100x100/100/000/fff&text=jugador1',
+            'nombre' => 'Pepito2',
+            'posicion' => 'portero',
+            'numero' => 10,
+            'equipo' => 'Equipo1',
+        ),
+        array(
+            'foto' => 'http://ximg.es/100x100/100/000/fff&text=jugador1',
+            'nombre' => 'Pepito3',
+            'posicion' => 'delantero',
+            'numero' => 10,
+            'equipo' => 'Equipo1',
+        ),
+        array(
+            'foto' => 'http://ximg.es/100x100/100/000/fff&text=jugador1',
+            'nombre' => 'Pepito4',
+            'posicion' => 'defensa',
+            'numero' => 10,
+            'equipo' => 'Equipo1',
+        )
+    );
 }

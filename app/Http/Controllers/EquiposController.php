@@ -6,6 +6,29 @@ use Illuminate\Http\Request;
 
 class EquiposController extends Controller
 {
+    private $arrayEquipos = array(
+        array(
+            'nombre' => 'Equipo1',
+            'dt' => 'D.T. 1',
+            'escudo' => 'http://ximg.es/200x300/000/fff&text=equipo1'
+             ),
+      array(
+            'nombre' => 'Equipo2',
+            'dt' => 'D.T. 2',
+            'escudo' => 'http://ximg.es/200x300/000/fff&text=equipo2'
+             ),
+      array(
+            'nombre' => 'Equipo3',
+            'dt' => 'D.T. 3',
+            'escudo' => 'http://ximg.es/200x300/000/fff&text=equipo3'
+             ),
+      array(
+            'nombre' => 'Equipo4',
+            'dt' => 'D.T. 4',
+            'escudo' => 'http://ximg.es/200x300/000/fff&text=equipo4'
+             ),
+    
+    );
     /**
      * Display a listing of the resource.
      *
